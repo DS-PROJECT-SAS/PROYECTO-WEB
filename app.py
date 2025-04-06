@@ -95,6 +95,7 @@ def ver_registros():
     return render_template_string('''
     <html>
     <head><title>Registros guardados</title></head>
+    <link rel="stylesheet" href="/static/css/registros.css">
     <body>
         <h2>Preguntas por categoría</h2>
         <ul>
