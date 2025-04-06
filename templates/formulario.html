@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rueda de la vida</title>
+</head>
+<body>
+    <h1>RUEDA DE LA VIDA</h1>
+    <p>Puntúa el grado de satisfacción o felicidad que tienes en cada apartado de tu Rueda de la Vida con un rango de uno a diez, siendo 1 el grado más bajo (muy insatisfecho) y 10 el grado más alto (muy satisfecho).</p>
+
+    <form action="/guardar" method="POST">
+        <h3>Datos personales</h3>
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Apellido:</label><br>
+        <input type="text" name="apellido" required><br><br>
+
+        <label>Edad:</label><br>
+        <input type="number" name="edad" min="1" required><br><br>
+
+        <h3>Preguntas</h3>
+        {% for categoria, pregunta in preguntas.items() %}
+            <label><b>{{ categoria.capitalize() }}</b>: {{ pregunta }}</label><br>
+            <input type="number" name="{{ categoria }}" min="1" max="10" required><br><br>
+        {% endfor %}
+
+        <button type="submit">Guardar</button>
+
+        <a href="/grafico" target="_blank">
+            <button type="button">Ver mi rueda de la vida</button>
+        </a>
+
+        <a href="/registros" target="_blank">
+            <button type="button">Historial R.V.</button>
+        </a>
+    </form>
+</body>
+</html>
+
