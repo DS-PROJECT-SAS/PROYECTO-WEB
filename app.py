@@ -27,7 +27,20 @@ PREGUNTAS = {
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/nosotros')
+def nosotros():
+    return render_template('nosotros.html')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+
+@app.route('/formulario')
+def formulario():
     return render_template('formulario.html', categorias=CATEGORIAS, preguntas=PREGUNTAS)
+
 
 @app.route('/guardar', methods=['POST'])
 def guardar():

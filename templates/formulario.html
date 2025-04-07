@@ -7,6 +7,16 @@
 </head>
 <body>
 
+    <header>
+        <h1>Bienvenido a la Rueda de la Vida</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
+        </nav>
+    </header>
+
     <h1>RUEDA DE LA VIDA</h1>
     <p>Puntúa el grado de satisfacción o felicidad que tienes en cada apartado de tu Rueda de la Vida con un rango de uno a diez, siendo 1 el grado más bajo (muy insatisfecho) y 10 el grado más alto (muy satisfecho).</p>
 
@@ -37,6 +47,9 @@
             <button type="button">Historial registros</button>
         </a>
     </form>
+    <footer>
+        <p>DS PROJECT SAS - RUEDA DE LA VIDA</p>
+    </footer>
 </body>
 </html>
 
